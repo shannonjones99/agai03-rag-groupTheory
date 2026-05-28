@@ -1,0 +1,68 @@
+# Group Homomorphism
+Source: https://en.wikipedia.org/wiki/Group_homomorphism
+
+In mathematics , given two groups , ( G ,∗) and ( H , ·), a group homomorphism from ( G ,∗) to ( H , ·) is a function h : G → H such that for all u and v in G it holds that
+h ( u ∗ v ) = h ( u ) ⋅ h ( v ) {\displaystyle h(u*v)=h(u)\cdot h(v)}
+where the group operation on the left side of the equation is that of G and on the right side that of H .
+From this property, one can deduce that h maps the identity element e G of G to the identity element e H of H ,
+h ( e G ) = e H {\displaystyle h(e_{G})=e_{H}}
+and it also maps inverses to inverses in the sense that
+h ( u − 1 ) = h ( u ) − 1 . {\displaystyle h\left(u^{-1}\right)=h(u)^{-1}.\,}
+Hence one can say that h "is compatible with the group structure".
+In areas of mathematics where one considers groups endowed with additional structure, a homomorphism sometimes means a map that respects not only the group structure (as above) but also the extra structure. For example, a homomorphism of topological groups is often required to be continuous .
+
+## Properties
+
+Let e H {\displaystyle e_{H}} be the identity element of the group ( H , ·) and u ∈ G {\displaystyle u\in G} , then
+h ( u ) ⋅ e H = h ( u ) = h ( u ∗ e G ) = h ( u ) ⋅ h ( e G ) {\displaystyle h(u)\cdot e_{H}=h(u)=h(u*e_{G})=h(u)\cdot h(e_{G})}
+Now by multiplying by the inverse of h ( u ) {\displaystyle h(u)} (or applying the cancellation rule) we obtain
+e H = h ( e G ) {\displaystyle e_{H}=h(e_{G})}
+e H = h ( e G ) = h ( u ∗ u − 1 ) = h ( u ) ⋅ h ( u − 1 ) {\displaystyle e_{H}=h(e_{G})=h(u*u^{-1})=h(u)\cdot h(u^{-1})}
+Therefore, by the uniqueness of the inverse: h ( u − 1 ) = h ( u ) − 1 {\displaystyle h(u^{-1})=h(u)^{-1}} .
+
+## Types
+
+Monomorphism A group homomorphism that is injective (or, one-to-one); i.e., preserves distinctness. Epimorphism A group homomorphism that is surjective (or, onto); i.e., reaches every point in the codomain. Isomorphism A group homomorphism that is bijective ; i.e., injective and surjective. Its inverse is also a group homomorphism. In this case, the groups G and H are called isomorphic ; they differ only in the notation of their elements (except of identity element) and are identical for all practical purposes. I.e. we re-label all elements except identity. Endomorphism A group homomorphism, h : G → G ; the domain and codomain are the same. Also called an endomorphism of G . Automorphism A group endomorphism that is bijective, and hence an isomorphism. The set of all automorphisms of a group G , with functional composition as operation, itself forms a group, the automorphism group of G . It is denoted by Aut( G ). As an example, the automorphism group of ( Z , +) contains only two elements, the identity transformation and multiplication with −1; it is isomorphic to ( Z /2 Z , +).
+
+## Image and kernel
+
+We define the kernel of h to be the set of elements in G that are mapped to the identity in H
+ker ⁡ ( h ) := { u ∈ G : h ( u ) = e H } . {\displaystyle \operatorname {ker} (h):=\left\{u\in G\colon h(u)=e_{H}\right\}.}
+im ⁡ ( h ) := h ( G ) ≡ { h ( u ) : u ∈ G } . {\displaystyle \operatorname {im} (h):=h(G)\equiv \left\{h(u)\colon u\in G\right\}.}
+The kernel and image of a homomorphism can be interpreted as measuring how close it is to being an isomorphism. The first isomorphism theorem states that the image of a group homomorphism, h ( G ) is isomorphic to the quotient group G /ker h .
+The kernel of h is a normal subgroup of G . Assume u ∈ ker ⁡ ( h ) {\displaystyle u\in \operatorname {ker} (h)} and show g − 1 ∘ u ∘ g ∈ ker ⁡ ( h ) {\displaystyle g^{-1}\circ u\circ g\in \operatorname {ker} (h)} for arbitrary u , g {\displaystyle u,g} :
+h ( g − 1 ∘ u ∘ g ) = h ( g ) − 1 ⋅ h ( u ) ⋅ h ( g ) = h ( g ) − 1 ⋅ e H ⋅ h ( g ) = h ( g ) − 1 ⋅ h ( g ) = e H , {\displaystyle {\begin{aligned}h\left(g^{-1}\circ u\circ g\right)&=h(g)^{-1}\cdot h(u)\cdot h(g)\\&=h(g)^{-1}\cdot e_{H}\cdot h(g)\\&=h(g)^{-1}\cdot h(g)=e_{H},\end{aligned}}}
+The image of h is a subgroup of H .
+The homomorphism, h , is a group monomorphism ; i.e., h is injective (one-to-one) if and only if ker( h ) = { e G }. Injectivity directly gives that there is a unique element in the kernel, and, conversely, a unique element in the kernel gives injectivity:
+h ( g 1 ) = h ( g 2 ) ⇔ h ( g 1 ) ⋅ h ( g 2 ) − 1 = e H ⇔ h ( g 1 ∘ g 2 − 1 ) = e H , ker ⁡ ( h ) = { e G } ⇒ g 1 ∘ g 2 − 1 = e G ⇔ g 1 = g 2 {\displaystyle {\begin{aligned}&&h(g_{1})&=h(g_{2})\\\Leftrightarrow &&h(g_{1})\cdot h(g_{2})^{-1}&=e_{H}\\\Leftrightarrow &&h\left(g_{1}\circ g_{2}^{-1}\right)&=e_{H},\ \operatorname {ker} (h)=\{e_{G}\}\\\Rightarrow &&g_{1}\circ g_{2}^{-1}&=e_{G}\\\Leftrightarrow &&g_{1}&=g_{2}\end{aligned}}}
+
+## Examples
+
+Consider the cyclic group Z 3 = ( Z /3 Z , +) = ({0, 1, 2}, +) and the group of integers ( Z , +). The map h : Z → Z /3 Z with h ( u ) = u mod 3 is a group homomorphism. It is surjective and its kernel consists of all integers that are divisible by 3.
+The set G ≡ { ( a b 0 1 ) | a > 0 , b ∈ R } {\displaystyle G\equiv \left\{{\begin{pmatrix}a&b\\0&1\end{pmatrix}}{\bigg |}a>0,b\in \mathbf {R} \right\}} forms a group under matrix multiplication . For any complex number u , the function f u : G → C defined by ( a b 0 1 ) ↦ a u {\displaystyle {\begin{pmatrix}a&b\\0&1\end{pmatrix}}\mapsto a^{u}} is a group homomorphism.
+G ≡ { ( a b 0 1 ) | a > 0 , b ∈ R } {\displaystyle G\equiv \left\{{\begin{pmatrix}a&b\\0&1\end{pmatrix}}{\bigg |}a>0,b\in \mathbf {R} \right\}}
+forms a group under matrix multiplication . For any complex number u , the function f u : G → C defined by
+( a b 0 1 ) ↦ a u {\displaystyle {\begin{pmatrix}a&b\\0&1\end{pmatrix}}\mapsto a^{u}}
+Consider a multiplicative group of positive real numbers ( R , ⋅). For any complex number u , the function f u : R → C defined by f u ( a ) = a u {\displaystyle f_{u}(a)=a^{u}} is a group homomorphism.
+f u ( a ) = a u {\displaystyle f_{u}(a)=a^{u}}
+The exponential map yields a group homomorphism from the group of real numbers R with addition to the group of non-zero real numbers R * with multiplication. The kernel is {0} and the image consists of the positive real numbers.
+The exponential map also yields a group homomorphism from the group of complex numbers C with addition to the group of non-zero complex numbers C * with multiplication. This map is surjective and has the kernel {2π ki : k ∈ Z }, as can be seen from Euler's formula .  Fields like R and C that have homomorphisms from their additive group to their multiplicative group are thus called exponential fields .
+The function Φ : ( Z , + ) → ( R , + ) {\displaystyle \Phi :(\mathbb {Z} ,+)\rightarrow (\mathbb {R} ,+)} , defined by Φ ( x ) = 2 x {\displaystyle \Phi (x)={\sqrt[{}]{2}}x} is a homomorphism.
+Consider the two groups ( R + , ∗ ) {\displaystyle (\mathbb {R} ^{+},*)} and ( R , + ) {\displaystyle (\mathbb {R} ,+)} , represented respectively by G {\displaystyle G} and H {\displaystyle H} , where R + {\displaystyle \mathbb {R} ^{+}} is the positive real numbers. Then, the function f : G → H {\displaystyle f:G\rightarrow H} defined by the logarithm function is a homomorphism.
+
+## Category of groups
+
+If h : G → H and k : H → K are group homomorphisms, then so is k ∘ h : G → K . This shows that the class of all groups, together with group homomorphisms as morphisms, forms a category (specifically the category of groups ).
+
+## Homomorphisms of abelian groups
+
+If G and H are abelian (i.e., commutative) groups, then the set Hom( G , H ) of all group homomorphisms from G to H is itself an abelian group: the sum h + k of two homomorphisms is defined by
+( h + k )( u ) = h ( u ) + k ( u )    for all u in G .
+The commutativity of H is needed to prove that h + k is again a group homomorphism.
+The addition of homomorphisms is compatible with the composition of homomorphisms in the following sense: if f is in Hom( K , G ) , h , k are elements of Hom( G , H ) , and g is in Hom( H , L ) , then
+( h + k ) ∘ f =  ( h ∘ f ) + ( k ∘ f ) and g ∘ ( h + k )  = ( g ∘ h ) + ( g ∘ k ) .
+Since the composition is associative , this shows that the set End( G ) of all endomorphisms of an abelian group forms a ring , the endomorphism ring of G . For example, the endomorphism ring of the abelian group consisting of the direct sum of m copies of Z / n Z is isomorphic to the ring of m -by- m matrices with entries in Z / n Z . The above compatibility also shows that the category of all abelian groups with group homomorphisms forms a preadditive category ; the existence of direct sums and well-behaved kernels makes this category the prototypical example of an abelian category .
+Fundamental theorem on homomorphisms
+Dummit, D. S.; Foote, R. (2004). Abstract Algebra (3rd ed.). Wiley. pp. 71– 72. ISBN 978-0-471-43334-7 .
+Lang, Serge (2002), Algebra , Graduate Texts in Mathematics , vol. 211 (Revised third ed.), New York: Springer-Verlag, ISBN 978-0-387-95385-4 , MR 1878556 , Zbl 0984.00001
+Rowland, Todd & Weisstein, Eric W. "Group Homomorphism" . MathWorld .

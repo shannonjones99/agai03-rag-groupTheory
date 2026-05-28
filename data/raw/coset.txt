@@ -1,0 +1,110 @@
+# Coset
+Source: https://en.wikipedia.org/wiki/Coset
+
+In mathematics , specifically group theory , a subgroup H of a group G may be used to decompose the underlying set of G into disjoint , equal-size subsets called cosets . There are left cosets and right cosets . Cosets (both left and right) have the same number of elements ( cardinality ) as does H . Furthermore, H itself is both a left coset and a right coset. The number of left cosets of H in G is equal to the number of right cosets of H in G . This common value is called the index of H in G and is usually denoted by [ G : H ] .
+Cosets are a basic tool in the study of groups; for example, they play a central role in Lagrange's theorem that states that for any finite group G , the number of elements of every subgroup H of G divides the number of elements of G . Cosets of a particular type of subgroup (a normal subgroup ) can be used as the elements of another group called a quotient group or factor group . Cosets also appear in other areas of mathematics such as vector spaces and error-correcting codes .
+
+## Definition
+
+Let H be a subgroup of the group G whose operation is written multiplicatively (juxtaposition denotes the group operation). Given an element g of G , the left cosets of H in G are the sets obtained by multiplying each element of H by a fixed element g of G (where g is the left factor). In symbols these are,
+The right cosets are defined similarly, except that the element g is now a right factor, that is,
+As g varies through the group, it would appear that many cosets (right or left) would be generated. Nevertheless, it turns out that any two left cosets (respectively right cosets) are either disjoint or are identical as sets.
+If the group operation is written additively, as is often the case when the group is abelian , the notation used changes to g + H or H + g , respectively.
+The symbol G / H is sometimes used for the set of (left) cosets { gH : g an element of G } (see below for a extension to right cosets and double cosets).  However, some authors (including Dummit & Foote and Rotman) reserve this notation specifically for representing the quotient group formed from the cosets in the case where H is a normal subgroup of G.
+
+### First example
+
+Let G be the dihedral group of order six . Its elements may be represented by { I , a , a , b , ab , a b } . In this group, a = b = I and ba = a b . This is enough information to fill in the entire Cayley table :
+Let T be the subgroup { I , b } . The (distinct) left cosets of T are:
+Since all the elements of G have now appeared in one of these cosets, generating any more can not give new cosets; any new coset would have to have an element in common with one of these and therefore would be identical to one of these cosets. For instance, abT = { ab , a } = aT .
+Ta = { a , ba } = { a , a b } , and
+Ta = { a , ba } = { a , ab } .
+In this example, except for T , no left coset is also a right coset.
+Let H be the subgroup { I , a , a } . The left cosets of H are IH = H and bH = { b , ba , ba } . The right cosets of H are HI = H and Hb = { b , ab , a b } = { b , ba , ba } . In this case, every left coset of H is also a right coset of H .
+Let H be a subgroup of a group G and suppose that g 1 , g 2 ∈ G . The following statements are equivalent:
+
+## Properties
+
+The disjointness of non-identical cosets is a result of the fact that if x belongs to gH then gH = xH . For if x ∈ gH then there must exist an a ∈ H such that ga = x . Thus xH = ( ga ) H = g ( aH ) . Moreover, since H is a group, left multiplication by a is a bijection , and aH = H .
+Thus every element of G belongs to exactly one left coset of the subgroup H , and H is itself a left coset (and the one that contains the identity).
+Two elements being in the same left coset also provide a natural equivalence relation . Define two elements of G , x and y , to be equivalent with respect to the subgroup H if xH = yH (or equivalently if x y belongs to H ). The equivalence classes of this relation are the left cosets of H . As with any set of equivalence classes, they form a partition of the underlying set. A coset representative is a representative in the equivalence class sense. A set of representatives of all the cosets is called a transversal . There are other types of equivalence relations in a group, such as conjugacy, that form different classes which do not have the properties discussed here.
+Similar statements apply to right cosets.
+If G is an abelian group , then g + H = H + g for every subgroup H of G and every element g of G . For general groups, given an element g and a subgroup H of a group G , the right coset of H with respect to g is also the left coset of the conjugate subgroup g Hg with respect to g , that is, Hg = g ( g Hg ) .
+
+### Normal subgroups
+
+A subgroup N of a group G is a normal subgroup of G if and only if for all elements g of G the corresponding left and right cosets are equal, that is, gN = Ng . This is the case for the subgroup H in the first example above. Furthermore, the cosets of N in G form a group called the quotient group or factor group G / N .
+If H is not normal in G , then its left cosets are different from its right cosets. That is, there is an a in G such that no element b satisfies aH = Hb . This means that the partition of G into the left cosets of H is a different partition than the partition of G into right cosets of H . This is illustrated by the subgroup T in the first example above. ( Some cosets may coincide. For example, if a is in the center of G , then aH = Ha .)
+On the other hand, if the subgroup N is normal the set of all cosets forms a group called the quotient group G / N with the operation ∗ defined by ( aN ) ∗ ( bN ) = abN . Since every right coset is a left coset, there is no need to distinguish "left cosets" from "right cosets".
+
+### Index of a subgroup
+
+Every left or right coset of H has the same number of elements (or cardinality in the case of an infinite H ) as H itself. Furthermore, the number of left cosets is equal to the number of right cosets and is known as the index of H in G , written as [ G : H ] . Lagrange's theorem allows us to compute the index in the case where G and H are finite: | G | = [ G : H ] | H | . {\displaystyle |G|=[G:H]|H|.} This equation can be generalized to the case where the groups are infinite.
+
+## More examples
+
+### Integers
+
+Let G be the additive group of the integers, Z = ({..., −2, −1, 0, 1, 2, ...}, +) and H the subgroup (3 Z , +) = ({..., −6, −3, 0, 3, 6, ...}, +) . Then the cosets of H in G are the three sets 3 Z , 3 Z + 1 , and 3 Z + 2 , where 3 Z + a = {..., −6 + a , −3 + a , a , 3 + a , 6 + a , ...} . These three sets partition the set Z , so there are no other right cosets of H . Due to the commutativity of addition H + 1 = 1 + H and H + 2 = 2 + H . That is, every left coset of H is also a right coset, so H is a normal subgroup. (The same argument shows that every subgroup of an Abelian group is normal. )
+This example may be generalized. Again let G be the additive group of the integers, Z = ({..., −2, −1, 0, 1, 2, ...}, +) , and now let H be the subgroup ( m Z , +) = ({..., −2 m , − m , 0, m , 2 m , ...}, +) , where m is a positive integer. Then the cosets of H in G are the m sets m Z , m Z + 1 , ..., m Z + ( m − 1) , where m Z + a = {..., −2 m + a , − m + a , a , m + a , 2 m + a , ...} . There are no more than m cosets, because m Z + m = m ( Z + 1) = m Z . The coset ( m Z + a , +) is the congruence class of a modulo m . The subgroup m Z is normal in Z , and so, can be used to form the quotient group Z / m Z the group of integers mod m .
+
+### Vectors
+
+Another example of a coset comes from the theory of vector spaces . The elements (vectors) of a vector space form an abelian group under vector addition . The subspaces of the vector space are subgroups of this group. For a vector space V , a subspace W , and a fixed vector a in V , the sets { x ∈ V ∣ x = a + w , w ∈ W } {\displaystyle \{\mathbf {x} \in V\mid \mathbf {x} =\mathbf {a} +\mathbf {w} ,\mathbf {w} \in W\}} are called affine subspaces , and are cosets (both left and right, since the group is abelian). In terms of 3-dimensional geometric vectors, these affine subspaces are all the "lines" or "planes" parallel to the subspace, which is a line or plane going through the origin. For example, consider the plane R . If m is a line through the origin O , then m is a subgroup of the abelian group R . If P is in R , then the coset P + m is a line m ′ parallel to m and passing through P .
+
+### Matrices
+
+Let G be the multiplicative group of matrices, G = { [ a 0 b 1 ] : a , b ∈ R , a ≠ 0 } , {\displaystyle G=\left\{{\begin{bmatrix}a&0\\b&1\end{bmatrix}}\colon a,b\in \mathbb {R} ,a\neq 0\right\},} and the subgroup H of G , H = { [ 1 0 c 1 ] : c ∈ R } . {\displaystyle H=\left\{{\begin{bmatrix}1&0\\c&1\end{bmatrix}}\colon c\in \mathbb {R} \right\}.} For a fixed element of G consider the left coset [ a 0 b 1 ] H = { [ a 0 b 1 ] [ 1 0 c 1 ] : c ∈ R } = { [ a 0 b + c 1 ] : c ∈ R } = { [ a 0 d 1 ] : d ∈ R } . {\displaystyle {\begin{aligned}{\begin{bmatrix}a&0\\b&1\end{bmatrix}}H=&~\left\{{\begin{bmatrix}a&0\\b&1\end{bmatrix}}{\begin{bmatrix}1&0\\c&1\end{bmatrix}}\colon c\in \mathbb {R} \right\}\\=&~\left\{{\begin{bmatrix}a&0\\b+c&1\end{bmatrix}}\colon c\in \mathbb {R} \right\}\\=&~\left\{{\begin{bmatrix}a&0\\d&1\end{bmatrix}}\colon d\in \mathbb {R} \right\}.\end{aligned}}} That is, the left cosets consist of all the matrices in G having the same upper-left entry. This subgroup H is normal in G , but the subgroup T = { [ a 0 0 1 ] : a ∈ R − { 0 } } {\displaystyle T=\left\{{\begin{bmatrix}a&0\\0&1\end{bmatrix}}\colon a\in \mathbb {R} -\{0\}\right\}} is not normal in G .
+
+## As orbits of a group action
+
+A subgroup H of a group G can be used to define an action of H on G in two natural ways. A right action , G × H → G given by ( g , h ) → gh or a left action , H × G → G given by ( h , g ) → hg . The orbit of g under the right action is the left coset gH , while the orbit under the left action is the right coset Hg .
+
+## History
+
+The concept of a coset dates back to Galois 's work of 1830–31. He introduced a notation but did not provide a name for the concept. The term "co-set" apparently appears for the first time in 1910 in a paper by G. A. Miller in the Quarterly Journal of Pure and Applied Mathematics (vol. 41, p. 382). Various other terms have been used including the German Nebengruppen ( Weber ) and conjugate group ( Burnside ). (Note that Miller abbreviated his self-citation to the Quarterly Journal of Mathematics ; this does not refer to the journal of the same name , which did not start publication until 1930.)
+Galois was concerned with deciding when a given polynomial equation was solvable by radicals . A tool that he developed was in noting that a subgroup H of a group of permutations G induced two decompositions of G (what we now call left and right cosets). If these decompositions coincided, that is, if the left cosets are the same as the right cosets, then there was a way to reduce the problem to one of working over H instead of G . Camille Jordan in his commentaries on Galois's work in 1865 and 1869 elaborated on these ideas and defined normal subgroups as we have above, although he did not use this term.
+Calling the coset gH the left coset of g with respect to H , while most common today, has not been universally true in the past. For instance, Hall (1959) would call gH a right coset , emphasizing the subgroup being on the right.
+
+## An application from coding theory
+
+A binary linear code is an n -dimensional subspace C of an m -dimensional vector space V over the binary field GF(2) . As V is an additive abelian group, C is a subgroup of this group. Codes can be used to correct errors that can occur in transmission. When a codeword (element of C ) is transmitted some of its bits may be altered in the process and the task of the receiver is to determine the most likely codeword that the corrupted received word could have started out as. This procedure is called decoding and if only a few errors are made in transmission it can be done effectively with only a very few mistakes. One method used for decoding uses an arrangement of the elements of V (a received word could be any element of V ) into a standard array . A standard array is a coset decomposition of V put into tabular form in a certain way. Namely, the top row of the array consists of the elements of C , written in any order, except that the zero vector should be written first. Then, an element of V with a minimal number of ones that does not already appear in the top row is selected and the coset of C containing this element is written as the second row (namely, the row is formed by taking the sum of this element with each element of C directly above it). This element is called a coset leader and there may be some choice in selecting it. Now the process is repeated, a new vector with a minimal number of ones that does not already appear is selected as a new coset leader and the coset of C containing it is the next row. The process ends when all the vectors of V have been sorted into the cosets.
+An example of a standard array for the 2-dimensional code C = {00000, 01101, 10110, 11011} in the 5-dimensional space V (with 32 vectors) is as follows:
+The decoding procedure is to find the received word in the table and then add to it the coset leader of the row it is in. Since in binary arithmetic adding is the same operation as subtracting, this always results in an element of C . In the event that the transmission errors occurred in precisely the non-zero positions of the coset leader the result will be the right codeword. In this example, if a single error occurs, the method will always correct it, since all possible coset leaders with a single one appear in the array.
+Syndrome decoding can be used to improve the efficiency of this method. It is a method of computing the correct coset (row) that a received word will be in. For an n -dimensional code C in an m -dimensional binary vector space, a parity check matrix is an ( m − n ) × m matrix H having the property that x H = 0 if and only if x is in C . The vector x H is called the syndrome of x , and by linearity , every vector in the same coset will have the same syndrome. To decode, the search is now reduced to finding the coset leader that has the same syndrome as the received word.
+
+## Double cosets
+
+Given two subgroups, H and K (which need not be distinct) of a group G , the double cosets of H and K in G are the sets of the form HgK = { hgk : h an element of H , k an element of K } . These are the left cosets of K and right cosets of H when H = 1 and K = 1 respectively.
+Two double cosets HxK and HyK are either disjoint or identical. The set of all double cosets for fixed H and K form a partition of G .
+A double coset HxK contains the complete right cosets of H (in G ) of the form Hxk , with k an element of K and the complete left cosets of K (in G ) of the form hxK , with h in H .
+
+### Notation
+
+Let G be a group with subgroups H and K . Several authors working with these sets have developed a specialized notation for their work, where
+G / H denotes the set of left cosets { gH : g in G } of H in G .
+H \ G denotes the set of right cosets { Hg : g in G } of H in G .
+K \ G / H denotes the set of double cosets { KgH : g in G } of H and K in G , sometimes referred to as double coset space .
+G // H denotes the double coset space H \ G / H of the subgroup H in G .
+
+## More applications
+
+Cosets of Q in R are used in the construction of Vitali sets , a type of non-measurable set .
+Cosets are central in the definition of the transfer .
+Cosets are important in computational group theory. For example, Thistlethwaite's algorithm for solving Rubik's Cube relies heavily on cosets.
+In geometry, a Clifford–Klein form is a double coset space Γ \ G / H , where G is a reductive Lie group , H is a closed subgroup, and Γ is a discrete subgroup (of G ) that acts properly discontinuously on the homogeneous space G / H .
+Burton, David M. (1988), Abstract Algebra , Wm. C. Brown Publishers, ISBN 0-697-06761-0
+Dean, Richard A. (1990), Classical Abstract Algebra , Harper and Row, ISBN 0-06-041601-7
+Fraleigh, John B. (1994), A First Course in Abstract Algebra (5th ed.), Addison-Wesley, ISBN 978-0-201-53467-2
+Hall, Jr., Marshall (1959), The Theory of Groups , The Macmillan Company
+Jacobson, Nathan (2009) [1985], Basic Algebra I (2nd ed.), Dover, ISBN 978-0-486-47189-1
+Joshi, K. D. (1989), "§5.2 Cosets of Subgroups", Foundations of Discrete Mathematics , New Age International, pp. 322 ff, ISBN 81-224-0120-1
+Miller, G. A. (2012) [1916], Theory and Applications of Finite Groups , Applewood Books, ISBN 9781458500700
+Rotman, Joseph J. (2006), A First Course in Abstract Algebra with Applications (3rd ed.), Prentice-Hall, ISBN 978-0-13-186267-8
+Scott, W.R. (1987), "§1.7 Cosets and index", Group Theory , Courier Dover Publications, pp. 19 ff, ISBN 0-486-65377-3
+Zassenhaus, Hans J. (1999), "§1.4 Subgroups", The Theory of Groups , Courier Dover Publications, pp. 10 ff, ISBN 0-486-40922-8
+Nicolas Bray. "Coset" . MathWorld .
+Weisstein, Eric W. "Left Coset" . MathWorld .
+Weisstein, Eric W. "Right Coset" . MathWorld .
+Ivanova, O.A. (2001) [1994], "Coset in a group" , Encyclopedia of Mathematics , EMS Press
+"Coset" . groupprops . The Group Properties Wiki.

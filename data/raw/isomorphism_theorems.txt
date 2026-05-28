@@ -1,0 +1,167 @@
+# Isomorphism Theorems
+Source: https://en.wikipedia.org/wiki/Isomorphism_theorems
+
+In mathematics , specifically abstract algebra , the isomorphism theorems (also known as Noether's isomorphism theorems ) are theorems that describe the relationship among quotients , homomorphisms , and subobjects .  Versions of the theorems exist for groups , rings , vector spaces , modules , Lie algebras , and other algebraic structures .  In universal algebra , the isomorphism theorems can be generalized to the context of algebras and congruences .
+
+## History
+
+The isomorphism theorems were formulated in some generality for homomorphisms of modules by Emmy Noether in her paper Abstrakter Aufbau der Idealtheorie in algebraischen Zahl- und Funktionenkörpern , which was published in 1927 in Mathematische Annalen . Three years later, B. L. van der Waerden published Moderne Algebra , an influential early abstract algebra textbook that helped standardize the structural treatment of groups , rings , and fields in which these theorems appear prominently.
+
+## Groups
+
+We first present the isomorphism theorems of the groups .
+
+### Theorem A (groups)
+
+Let G {\displaystyle G} and H {\displaystyle H} be groups, and let f : G → H {\displaystyle f:G\rightarrow H} be a homomorphism .  Then:
+The kernel of f {\displaystyle f} is a normal subgroup of G {\displaystyle G} ,
+The image of f {\displaystyle f} is a subgroup of H {\displaystyle H} , and
+The image of f {\displaystyle f} is isomorphic to the quotient group G / ker ⁡ f {\displaystyle G/\ker f} .
+In particular, if f {\displaystyle f} is surjective then H {\displaystyle H} is isomorphic to G / ker ⁡ f {\displaystyle G/\ker f} .
+This theorem is usually called the first isomorphism theorem .
+
+### Theorem B (groups)
+
+Let G {\displaystyle G} be a group.  Let S {\displaystyle S} be a subgroup of G {\displaystyle G} , and let N {\displaystyle N} be a normal subgroup of G {\displaystyle G} .  Then the following hold:
+The product S N {\displaystyle SN} is a subgroup of G {\displaystyle G} ,
+The subgroup N {\displaystyle N} is a normal subgroup of S N {\displaystyle SN} ,
+The intersection S ∩ N {\displaystyle S\cap N} is a normal subgroup of S {\displaystyle S} , and
+The quotient groups ( S N ) / N {\displaystyle (SN)/N} and S / ( S ∩ N ) {\displaystyle S/(S\cap N)} are isomorphic.
+Technically, it is not necessary for N {\displaystyle N} to be a normal subgroup, as long as S {\displaystyle S} is a subgroup of the normalizer of N {\displaystyle N} in G {\displaystyle G} .  In this case, N {\displaystyle N} is not a normal subgroup of G {\displaystyle G} , but N {\displaystyle N} is still a normal subgroup of the product S N {\displaystyle SN} .
+This theorem is sometimes called the second isomorphism theorem , diamond theorem or the parallelogram theorem .
+An application of the second isomorphism theorem identifies projective linear groups : for example, the group on the complex projective line starts with setting G = GL 2 ⁡ ( C ) {\displaystyle G=\operatorname {GL} _{2}(\mathbb {C} )} , the group of invertible 2 × 2 complex matrices , S = SL 2 ⁡ ( C ) {\displaystyle S=\operatorname {SL} _{2}(\mathbb {C} )} , the subgroup of determinant 1 matrices, and N {\displaystyle N} the normal subgroup of scalar matrices C × I = { ( a 0 0 a ) : a ∈ C × } {\displaystyle \mathbb {C} ^{\times }\!I=\left\{\left({\begin{smallmatrix}a&0\\0&a\end{smallmatrix}}\right):a\in \mathbb {C} ^{\times }\right\}} , we have S ∩ N = { ± I } {\displaystyle S\cap N=\{\pm I\}} , where I {\displaystyle I} is the identity matrix , and S N = GL 2 ⁡ ( C ) {\displaystyle SN=\operatorname {GL} _{2}(\mathbb {C} )} . Then the second isomorphism theorem states that:
+PGL 2 ⁡ ( C ) := GL 2 ⁡ ( C ) / ( C × I ) ≅ SL 2 ⁡ ( C ) / { ± I } =: PSL 2 ⁡ ( C ) {\displaystyle \operatorname {PGL} _{2}(\mathbb {C} ):=\operatorname {GL} _{2}\left(\mathbb {C} )/(\mathbb {C} ^{\times }\!I\right)\cong \operatorname {SL} _{2}(\mathbb {C} )/\{\pm I\}=:\operatorname {PSL} _{2}(\mathbb {C} )}
+
+### Theorem C (groups)
+
+Let G {\displaystyle G} be a group, and N {\displaystyle N} a normal subgroup of G {\displaystyle G} .
+Then
+If K {\displaystyle K} is a subgroup of G {\displaystyle G} such that N ⊆ K ⊆ G {\displaystyle N\subseteq K\subseteq G} , then G / N {\displaystyle G/N} has a subgroup isomorphic to K / N {\displaystyle K/N} .
+Every subgroup of G / N {\displaystyle G/N} is of the form K / N {\displaystyle K/N} for some subgroup K {\displaystyle K} of G {\displaystyle G} such that N ⊆ K ⊆ G {\displaystyle N\subseteq K\subseteq G} .
+If K {\displaystyle K} is a normal subgroup of G {\displaystyle G} such that N ⊆ K ⊆ G {\displaystyle N\subseteq K\subseteq G} , then G / N {\displaystyle G/N} has a normal subgroup isomorphic to K / N {\displaystyle K/N} .
+Every normal subgroup of G / N {\displaystyle G/N} is of the form K / N {\displaystyle K/N} for some normal subgroup K {\displaystyle K} of G {\displaystyle G} such that N ⊆ K ⊆ G {\displaystyle N\subseteq K\subseteq G} .
+If K {\displaystyle K} is a normal subgroup of G {\displaystyle G} such that N ⊆ K ⊆ G {\displaystyle N\subseteq K\subseteq G} , then the quotient group ( G / N ) / ( K / N ) {\displaystyle (G/N)/(K/N)} is isomorphic to G / K {\displaystyle G/K} .
+The last statement is sometimes referred to as the third isomorphism theorem . The first four statements are often subsumed under Theorem D below, and referred to as the lattice theorem , correspondence theorem , or fourth isomorphism theorem .
+
+### Theorem D (groups)
+
+Let G {\displaystyle G} be a group, and N {\displaystyle N} a normal subgroup of G {\displaystyle G} .
+The canonical projection homomorphism G → G / N {\displaystyle G\rightarrow G/N} defines a bijective correspondence
+between the set of subgroups of G {\displaystyle G} containing N {\displaystyle N} and the set of (all) subgroups of G / N {\displaystyle G/N} . Under this correspondence normal subgroups correspond to normal subgroups.
+This theorem is sometimes called the correspondence theorem , the lattice theorem , and the fourth isomorphism theorem .
+The Zassenhaus lemma (also known as the butterfly lemma) is sometimes called the fourth isomorphism theorem.
+
+### Discussion
+
+The first isomorphism theorem can be expressed in category theoretical language by saying that the category of groups is (normal epi, mono)-factorizable; in other words, the normal epimorphisms and the monomorphisms form a factorization system for the category .  This is captured in the commutative diagram in the margin, which shows the objects and morphisms whose existence can be deduced from the morphism f : G → H {\displaystyle f:G\rightarrow H} .  The diagram shows that every morphism in the category of groups has a kernel in the category theoretical sense; the arbitrary morphism f factors into ι ∘ π {\displaystyle \iota \circ \pi } , where ι is a monomorphism and π is an epimorphism (in a conormal category , all epimorphisms are normal).  This is represented in the diagram by an object ker ⁡ f {\displaystyle \ker f} and a monomorphism κ : ker ⁡ f → G {\displaystyle \kappa :\ker f\rightarrow G} (kernels are always monomorphisms), which complete the short exact sequence running from the lower left to the upper right of the diagram.  The use of the exact sequence convention saves us from having to draw the zero morphisms from ker ⁡ f {\displaystyle \ker f} to H {\displaystyle H} and G / ker ⁡ f {\displaystyle G/\ker f} .
+If the sequence is right split (i.e., there is a morphism σ that maps G / ker ⁡ f {\displaystyle G/\operatorname {ker} f} to a π -preimage of itself), then G is the semidirect product of the normal subgroup im ⁡ κ {\displaystyle \operatorname {im} \kappa } and the subgroup im ⁡ σ {\displaystyle \operatorname {im} \sigma } .  If it is left split (i.e., there exists some ρ : G → ker ⁡ f {\displaystyle \rho :G\rightarrow \operatorname {ker} f} such that ρ ∘ κ = id ker f {\displaystyle \rho \circ \kappa =\operatorname {id} _{{\text{ker}}f}} ), then it must also be right split, and im ⁡ κ × im ⁡ σ {\displaystyle \operatorname {im} \kappa \times \operatorname {im} \sigma } is a direct product decomposition of G .  In general, the existence of a right split does not imply the existence of a left split; but in an abelian category (such as that of abelian groups ), left splits and right splits are equivalent by the splitting lemma , and a right split is sufficient to produce a direct sum decomposition im ⁡ κ ⊕ im ⁡ σ {\displaystyle \operatorname {im} \kappa \oplus \operatorname {im} \sigma } .  In an abelian category, all monomorphisms are also normal, and the diagram may be extended by a second short exact sequence 0 → G / ker ⁡ f → H → coker ⁡ f → 0 {\displaystyle 0\rightarrow G/\operatorname {ker} f\rightarrow H\rightarrow \operatorname {coker} f\rightarrow 0} .
+In the second isomorphism theorem, the product SN is the join of S and N in the lattice of subgroups of G , while the intersection S ∩ N is the meet .
+The third isomorphism theorem is generalized by the nine lemma to abelian categories and more general maps between objects.
+
+### Note on numbers and names
+
+Below we present four theorems, labelled A, B, C and D. They are often numbered as "First isomorphism theorem", "Second..." and so on; however, there is no universal agreement on the numbering. Here we give some examples of the group isomorphism theorems in the literature. Notice that these theorems have analogs for rings and modules.
+It is less common to include the Theorem D, usually known as the lattice theorem or the correspondence theorem , as one of isomorphism theorems, but when included, it is the last one.
+
+## Rings
+
+The statements of the theorems for rings are similar, with the notion of a normal subgroup replaced by the notion of an ideal .
+
+### Theorem A (rings)
+
+Let R {\displaystyle R} and S {\displaystyle S} be rings, and let φ : R → S {\displaystyle \varphi :R\rightarrow S} be a ring homomorphism . Then:
+The kernel of φ {\displaystyle \varphi } is an ideal of R {\displaystyle R} ,
+The image of φ {\displaystyle \varphi } is a subring of S {\displaystyle S} , and
+The image of φ {\displaystyle \varphi } is isomorphic to the quotient ring R / ker ⁡ φ {\displaystyle R/\ker \varphi } .
+In particular, if φ {\displaystyle \varphi } is surjective then S {\displaystyle S} is isomorphic to R / ker ⁡ φ {\displaystyle R/\ker \varphi } .
+
+### Theorem B (rings)
+
+Let R {\displaystyle R} be a ring.  Let S {\displaystyle S} be a subring of R {\displaystyle R} , and let I {\displaystyle I} be an ideal of R {\displaystyle R} .  Then:
+The sum S + I = { s + i ∣ s ∈ S , i ∈ I } {\displaystyle S+I=\{s+i\mid s\in S,i\in I\}} is a subring of R {\displaystyle R} ,
+The intersection S ∩ I {\displaystyle S\cap I} is an ideal of S {\displaystyle S} , and
+The quotient rings ( S + I ) / I {\displaystyle (S+I)/I} and S / ( S ∩ I ) {\displaystyle S/(S\cap I)} are isomorphic.
+
+### Theorem C (rings)
+
+Let R be a ring, and I an ideal of R .  Then
+If A {\displaystyle A} is a subring of R {\displaystyle R} such that I ⊆ A ⊆ R {\displaystyle I\subseteq A\subseteq R} , then A / I {\displaystyle A/I} is a subring of R / I {\displaystyle R/I} .
+Every subring of R / I {\displaystyle R/I} is of the form A / I {\displaystyle A/I} for some subring A {\displaystyle A} of R {\displaystyle R} such that I ⊆ A ⊆ R {\displaystyle I\subseteq A\subseteq R} .
+If J {\displaystyle J} is an ideal of R {\displaystyle R} such that I ⊆ J ⊆ R {\displaystyle I\subseteq J\subseteq R} , then J / I {\displaystyle J/I} is an ideal of R / I {\displaystyle R/I} .
+Every ideal of R / I {\displaystyle R/I} is of the form J / I {\displaystyle J/I} for some ideal J {\displaystyle J} of R {\displaystyle R} such that I ⊆ J ⊆ R {\displaystyle I\subseteq J\subseteq R} .
+If J {\displaystyle J} is an ideal of R {\displaystyle R} such that I ⊆ J ⊆ R {\displaystyle I\subseteq J\subseteq R} , then the quotient ring ( R / I ) / ( J / I ) {\displaystyle (R/I)/(J/I)} is isomorphic to R / J {\displaystyle R/J} .
+
+### Theorem D (rings)
+
+Let I {\displaystyle I} be an ideal of R {\displaystyle R} . The correspondence A ↔ A / I {\displaystyle A\leftrightarrow A/I} is an inclusion -preserving bijection between the set of subrings A {\displaystyle A} of R {\displaystyle R} that contain I {\displaystyle I} and the set of subrings of R / I {\displaystyle R/I} . Furthermore, A {\displaystyle A} (a subring containing I {\displaystyle I} ) is an ideal of R {\displaystyle R} if and only if A / I {\displaystyle A/I} is an ideal of R / I {\displaystyle R/I} .
+
+## Modules
+
+The statements of the isomorphism theorems for modules are particularly simple, since it is possible to form a quotient module from any submodule .  The isomorphism theorems for vector spaces (modules over a field ) and abelian groups (modules over Z {\displaystyle \mathbb {Z} } ) are special cases of these.  For finite-dimensional vector spaces, all of these theorems follow from the rank–nullity theorem .
+In the following, "module" will mean " R -module" for some fixed ring R .
+
+### Theorem A (modules)
+
+Let M {\displaystyle M} and N {\displaystyle N} be modules, and let φ : M → N {\displaystyle \varphi :M\rightarrow N} be a module homomorphism .  Then:
+The kernel of φ {\displaystyle \varphi } is a submodule of M {\displaystyle M} ,
+The image of φ {\displaystyle \varphi } is a submodule of N {\displaystyle N} , and
+The image of φ {\displaystyle \varphi } is isomorphic to the quotient module M / ker ⁡ φ {\displaystyle M/\ker \varphi } .
+In particular, if φ {\displaystyle \varphi } is surjective then N {\displaystyle N} is isomorphic to M / ker ⁡ φ {\displaystyle M/\ker \varphi } .
+
+### Theorem B (modules)
+
+Let M {\displaystyle M} be a module, and let S {\displaystyle S} and T {\displaystyle T} be submodules of M {\displaystyle M} .  Then:
+The sum S + T = { s + t ∣ s ∈ S , t ∈ T } {\displaystyle S+T=\{s+t\mid s\in S,t\in T\}} is a submodule of M {\displaystyle M} ,
+The intersection S ∩ T {\displaystyle S\cap T} is a submodule of M {\displaystyle M} , and
+The quotient modules ( S + T ) / T {\displaystyle (S+T)/T} and S / ( S ∩ T ) {\displaystyle S/(S\cap T)} are isomorphic.
+
+### Theorem C (modules)
+
+Let M be a module, T a submodule of M .
+If S {\displaystyle S} is a submodule of M {\displaystyle M} such that T ⊆ S ⊆ M {\displaystyle T\subseteq S\subseteq M} , then S / T {\displaystyle S/T} is a submodule of M / T {\displaystyle M/T} .
+Every submodule of M / T {\displaystyle M/T} is of the form S / T {\displaystyle S/T} for some submodule S {\displaystyle S} of M {\displaystyle M} such that T ⊆ S ⊆ M {\displaystyle T\subseteq S\subseteq M} .
+If S {\displaystyle S} is a submodule of M {\displaystyle M} such that T ⊆ S ⊆ M {\displaystyle T\subseteq S\subseteq M} , then the quotient module ( M / T ) / ( S / T ) {\displaystyle (M/T)/(S/T)} is isomorphic to M / S {\displaystyle M/S} .
+
+### Theorem D (modules)
+
+Let M {\displaystyle M} be a module, N {\displaystyle N} a submodule of M {\displaystyle M} . There is a bijection between the submodules of M {\displaystyle M} that contain N {\displaystyle N} and the submodules of M / N {\displaystyle M/N} . The correspondence is given by A ↔ A / N {\displaystyle A\leftrightarrow A/N} for all A ⊇ N {\displaystyle A\supseteq N} . This correspondence commutes with the processes of taking sums and intersections (i.e., is a lattice isomorphism between the lattice of submodules of M / N {\displaystyle M/N} and the lattice of submodules of M {\displaystyle M} that contain N {\displaystyle N} ).
+
+## Universal algebra
+
+To generalise this to universal algebra , normal subgroups need to be replaced by congruence relations .
+A congruence on an algebra A {\displaystyle A} is an equivalence relation Φ ⊆ A × A {\displaystyle \Phi \subseteq A\times A} that forms a subalgebra of A × A {\displaystyle A\times A} considered as an algebra with componentwise operations.  One can make the set of equivalence classes A / Φ {\displaystyle A/\Phi } into an algebra of the same type by defining the operations via representatives; this will be well-defined since Φ {\displaystyle \Phi } is a subalgebra of A × A {\displaystyle A\times A} . The resulting structure is the quotient algebra .
+
+### Theorem A (universal algebra)
+
+Let f : A → B {\displaystyle f:A\rightarrow B} be an algebra homomorphism .  Then the image of f {\displaystyle f} is a subalgebra of B {\displaystyle B} , the relation given by Φ : f ( x ) = f ( y ) {\displaystyle \Phi :f(x)=f(y)} (i.e. the kernel of f {\displaystyle f} ) is a congruence on A {\displaystyle A} , and the algebras A / Φ {\displaystyle A/\Phi } and im ⁡ f {\displaystyle \operatorname {im} f} are isomorphic . (Note that in the case of a group, f ( x ) = f ( y ) {\displaystyle f(x)=f(y)} iff f ( x y − 1 ) = 1 {\displaystyle f(xy^{-1})=1} , so one recovers the notion of kernel used in group theory in this case.)
+
+### Theorem B (universal algebra)
+
+Given an algebra A {\displaystyle A} , a subalgebra B {\displaystyle B} of A {\displaystyle A} , and a congruence Φ {\displaystyle \Phi } on A {\displaystyle A} , let Φ B = Φ ∩ ( B × B ) {\displaystyle \Phi _{B}=\Phi \cap (B\times B)} be the trace of Φ {\displaystyle \Phi } in B {\displaystyle B} and [ B ] Φ = { K ∈ A / Φ : K ∩ B ≠ ∅ } {\displaystyle [B]^{\Phi }=\{K\in A/\Phi :K\cap B\neq \emptyset \}} the collection of equivalence classes that intersect B {\displaystyle B} . Then
+Φ B {\displaystyle \Phi _{B}} is a congruence on B {\displaystyle B} ,
+[ B ] Φ {\displaystyle \ [B]^{\Phi }} is a subalgebra of A / Φ {\displaystyle A/\Phi } , and
+the algebra [ B ] Φ {\displaystyle [B]^{\Phi }} is isomorphic to the algebra B / Φ B {\displaystyle B/\Phi _{B}} .
+
+### Theorem C (universal algebra)
+
+Let A {\displaystyle A} be an algebra and Φ , Ψ {\displaystyle \Phi ,\Psi } two congruence relations on A {\displaystyle A} such that Ψ ⊆ Φ {\displaystyle \Psi \subseteq \Phi } . Then Φ / Ψ = { ( [ a ′ ] Ψ , [ a ″ ] Ψ ) : ( a ′ , a ″ ) ∈ Φ } = [ ] Ψ ∘ Φ ∘ [ ] Ψ − 1 {\displaystyle \Phi /\Psi =\{([a']_{\Psi },[a'']_{\Psi }):(a',a'')\in \Phi \}=[\ ]_{\Psi }\circ \Phi \circ [\ ]_{\Psi }^{-1}} is a congruence on A / Ψ {\displaystyle A/\Psi } , and A / Φ {\displaystyle A/\Phi } is isomorphic to ( A / Ψ ) / ( Φ / Ψ ) . {\displaystyle (A/\Psi )/(\Phi /\Psi ).}
+
+### Theorem D (universal algebra)
+
+Let A {\displaystyle A} be an algebra and denote Con ⁡ A {\displaystyle \operatorname {Con} A} the set of all congruences on A {\displaystyle A} . The set Con ⁡ A {\displaystyle \operatorname {Con} A} is a complete lattice ordered by inclusion. If Φ ∈ Con ⁡ A {\displaystyle \Phi \in \operatorname {Con} A} is a congruence and we denote by [ Φ , A × A ] ⊆ Con ⁡ A {\displaystyle \left[\Phi ,A\times A\right]\subseteq \operatorname {Con} A} the set of all congruences that contain Φ {\displaystyle \Phi } (i.e. [ Φ , A × A ] {\displaystyle \left[\Phi ,A\times A\right]} is a principal filter in Con ⁡ A {\displaystyle \operatorname {Con} A} , moreover it is a sublattice), then
+the map α : [ Φ , A × A ] → Con ⁡ ( A / Φ ) , Ψ ↦ Ψ / Φ {\displaystyle \alpha :\left[\Phi ,A\times A\right]\to \operatorname {Con} (A/\Phi ),\Psi \mapsto \Psi /\Phi } is a lattice isomorphism.
+Noether, Emmy , Abstrakter Aufbau der Idealtheorie in algebraischen Zahl- und Funktionenkörpern , Mathematische Annalen 96 (1927) pp. 26–61
+McLarty, Colin , "Emmy Noether's 'Set Theoretic' Topology: From Dedekind to the rise of functors". The Architecture of Modern Mathematics: Essays in history and philosophy (edited by Jeremy Gray and José Ferreirós), Oxford University Press (2006) pp. 211–35.
+Jacobson, Nathan (2009), Basic algebra , vol. 1 (2nd ed.), Dover, ISBN 9780486471891
+Cohn, Paul M., Universal algebra , Chapter II.3 p. 57
+Milne, James S. (2013), Group Theory , 3.13
+van der Waerden, B. I. (1994), Algebra , vol. 1 (9 ed.), Springer-Verlag
+Dummit, David S.; Foote, Richard M. (2004). Abstract algebra . Hoboken, NJ: Wiley. ISBN 978-0-471-43334-7 .
+Burris, Stanley; Sankappanavar, H. P. (2012). A Course in Universal Algebra (PDF) . S. Burris and H.P. Sankappanavar. ISBN 978-0-9880552-0-9 .
+Scott, W. R. (1964), Group Theory , Prentice Hall
+Durbin, John R. (2009). Modern Algebra: An Introduction (6 ed.). Wiley. ISBN 978-0-470-38443-5 .
+Knapp, Anthony W. (2016), Basic Algebra (Digital second ed.)
+Grillet, Pierre Antoine (2007), Abstract Algebra (2 ed.), Springer
+Rotman, Joseph J. (2003), Advanced Modern Algebra (2 ed.), Prentice Hall, ISBN 0130878685
+Hungerford, Thomas W. (1980), Algebra (Graduate Texts in Mathematics, 73) , Springer, ISBN 0387905189
+van der Waerden, B. L. (1930). Moderne Algebra . Vol. 1. Berlin: J. Springer.

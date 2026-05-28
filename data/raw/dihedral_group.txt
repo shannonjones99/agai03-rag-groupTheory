@@ -1,0 +1,124 @@
+# Dihedral Group
+Source: https://en.wikipedia.org/wiki/Dihedral_group
+
+In mathematics , a dihedral group is the group of symmetries of a regular polygon , which includes rotations and reflections . Dihedral groups are among the simplest examples of finite groups , and they play an important role in group theory , geometry , and chemistry .
+The notation for the dihedral group differs in geometry and abstract algebra . In geometry , D n or Dih n refers to the symmetries of the n -gon , a group of order 2 n . In abstract algebra , D 2 n refers to this same dihedral group. This article uses the geometric convention, D n .
+
+## Definition
+
+The word "dihedral" comes from "di-" and "-hedron".
+The latter comes from the  Greek word hédra, which means "face of a geometrical solid". Overall, it thus refers to the two faces of a polygon.
+
+### Elements
+
+A regular polygon with n {\displaystyle n} sides has 2 n {\displaystyle 2n} different symmetries: n {\displaystyle n} rotational symmetries and n {\displaystyle n} reflection symmetries ; here, n ≥ 3 {\displaystyle n\geq 3} . The associated rotations and reflections make up the dihedral group D n {\displaystyle \mathrm {D} _{n}} . If n {\displaystyle n} is odd, each reflection axis of symmetry connects the midpoint of one side to the opposite vertex. If n {\displaystyle n} is even, there are n / 2 {\displaystyle n/2} axes of symmetry connecting the midpoints of opposite sides and n / 2 {\displaystyle n/2} axes of symmetry connecting opposite vertices. In either case, there are n {\displaystyle n} axes of symmetry and 2 n {\displaystyle 2n} elements in the symmetry group. Reflecting in one axis of symmetry followed by reflecting in another axis of symmetry produces a rotation through twice the angle between the axes.
+
+### Group structure
+
+As with any geometric object, the composition of two symmetries of a regular polygon is again a symmetry of this object.  With composition of symmetries to produce another as the binary operation, this gives the symmetries of a polygon the algebraic structure of a finite group .
+The following Cayley table shows the effect of composition in the dihedral group of order 6 , D 3 {\displaystyle \mathrm {D} _{3}} —the symmetries of an equilateral triangle . Here, r 0 {\displaystyle \mathrm {r} _{0}} denotes the identity, r 1 {\displaystyle \mathrm {r} _{1}} and r 2 {\displaystyle \mathrm {r} _{2}} denote counterclockwise rotations by 120° and 240° respectively, as well as s 0 {\displaystyle \mathrm {s} _{0}} , s 1 {\displaystyle \mathrm {s} _{1}} , and s 2 {\displaystyle \mathrm {s} _{2}} denote reflections across the three lines shown in the adjacent picture.
+For example, s 2 s 1 = r 1 {\displaystyle \mathrm {s} _{2}\mathrm {s} _{1}=\mathrm {r} _{1}} , because the reflection s 1 {\displaystyle \mathrm {s} _{1}} followed by the reflection s 2 results in a rotation of 120°.  The order of elements denoting the composition is right to left, reflecting the convention that the element acts on the expression to its right. The composition operation is not commutative .
+In general, the group D n {\displaystyle \mathrm {D} _{n}} has elements r 0 , … , r n − 1 {\displaystyle r_{0},\dots ,r_{n-1}} and s 0 , … , s n − 1 {\displaystyle s_{0},\dots ,s_{n-1}} , with composition given by the following formulae: r i r j = r i + j , r i s j = s i + j , s i r j = s i − j , s i s j = r i − j . {\displaystyle {\begin{aligned}\mathrm {r} _{i}\,\mathrm {r} _{j}=\mathrm {r} _{i+j},&\qquad \mathrm {r} _{i}\,\mathrm {s} _{j}=\mathrm {s} _{i+j},\\\mathrm {s} _{i}\,\mathrm {r} _{j}=\mathrm {s} _{i-j},&\qquad \mathrm {s} _{i}\,\mathrm {s} _{j}=\mathrm {r} _{i-j}.\end{aligned}}}
+In all cases, addition and subtraction of subscripts are to be performed using modular arithmetic with modulus n {\displaystyle n} .
+
+### Matrix representation
+
+Centering the regular polygon at the origin, elements of the dihedral group act as linear transformations of the plane . This lets elements of D n {\displaystyle \mathrm {D} _{n}} represented as matrices , with composition being matrix multiplication . This is an example of a (two-dimensional) group representation .
+For example, the elements of the group dihedral group of order 8 , D 4 {\displaystyle \mathrm {D} _{4}} —the group symmetry of a square —can be represented by the following eight matrices: r 0 = ( 1 0 0 1 ) , r 1 = ( 0 − 1 1 0 ) , r 2 = ( − 1 0 0 − 1 ) , r 3 = ( 0 1 − 1 0 ) , s 0 = ( 1 0 0 − 1 ) , s 1 = ( 0 1 1 0 ) , s 2 = ( − 1 0 0 1 ) , s 3 = ( 0 − 1 − 1 0 ) . {\displaystyle {\begin{matrix}\mathrm {r} _{0}=\left({\begin{smallmatrix}1&0\\[0.2em]0&1\end{smallmatrix}}\right),&\mathrm {r} _{1}=\left({\begin{smallmatrix}0&-1\\[0.2em]1&0\end{smallmatrix}}\right),&\mathrm {r} _{2}=\left({\begin{smallmatrix}-1&0\\[0.2em]0&-1\end{smallmatrix}}\right),&\mathrm {r} _{3}=\left({\begin{smallmatrix}0&1\\[0.2em]-1&0\end{smallmatrix}}\right),\\[1em]\mathrm {s} _{0}=\left({\begin{smallmatrix}1&0\\[0.2em]0&-1\end{smallmatrix}}\right),&\mathrm {s} _{1}=\left({\begin{smallmatrix}0&1\\[0.2em]1&0\end{smallmatrix}}\right),&\mathrm {s} _{2}=\left({\begin{smallmatrix}-1&0\\[0.2em]0&1\end{smallmatrix}}\right),&\mathrm {s} _{3}=\left({\begin{smallmatrix}0&-1\\[0.2em]-1&0\end{smallmatrix}}\right).\end{matrix}}} Here, these matrices represents the symmetries of an axis-aligned square centered at the origin , which acts on the plane by multiplication on column vectors of coordinates ( x y ) {\textstyle {\bigl (}{\begin{smallmatrix}x\\y\end{smallmatrix}}{\bigr )}} . The element r 0 {\displaystyle \mathrm {r} _{0}} represents the identity. The elements s 0 {\displaystyle \mathrm {s} _{0}} and s 2 {\displaystyle \mathrm {s} _{2}} represents the reflection across horizontal and vertical axis. The elements s 1 {\displaystyle \mathrm {s} _{1}} and s 3 {\displaystyle \mathrm {s} _{3}} represents the reflection across diagonals. Three other elements r 1 {\displaystyle \mathrm {r} _{1}} , r 2 {\displaystyle \mathrm {r} _{2}} , and r 3 {\displaystyle \mathrm {r} _{3}} are rotations around a center.
+In general, the matrices for elements of D n {\displaystyle \mathrm {D} _{n}} have the following form: r k = ( cos ⁡ 2 π k n − sin ⁡ 2 π k n sin ⁡ 2 π k n cos ⁡ 2 π k n ) and s k = ( cos ⁡ 2 π k n sin ⁡ 2 π k n sin ⁡ 2 π k n − cos ⁡ 2 π k n ) . {\displaystyle {\begin{aligned}\mathrm {r} _{k}&={\begin{pmatrix}\cos {\frac {2\pi k}{n}}&-\sin {\frac {2\pi k}{n}}\\\sin {\frac {2\pi k}{n}}&\cos {\frac {2\pi k}{n}}\end{pmatrix}}\ \ {\text{and}}\\[5pt]\mathrm {s} _{k}&={\begin{pmatrix}\cos {\frac {2\pi k}{n}}&\sin {\frac {2\pi k}{n}}\\\sin {\frac {2\pi k}{n}}&-\cos {\frac {2\pi k}{n}}\end{pmatrix}}.\end{aligned}}} Here, the element r k {\displaystyle \mathrm {r} _{k}} is a rotation matrix , expressing a counterclockwise rotation through an angle of 2 π k / n {\displaystyle 2\pi k/n} . The element s k {\displaystyle \mathrm {s} _{k}} is a reflection across a line that makes an angle of π k / n {\displaystyle \pi k/n} with the x {\displaystyle x} -axis .
+
+### Other definitions
+
+D n is the semidirect product of C 2 = { 1 , s } {\displaystyle \mathrm {C} _{2}=\{1,s\}} acting on C n {\displaystyle \mathrm {C} _{n}} via the automorphism φ s ( r ) = r − 1 {\displaystyle \varphi _{s}(r)=r^{-1}} .
+D n = ⟨ r , s ∣ ord ⁡ ( r ) = n , ord ⁡ ( s ) = 2 , s r s − 1 = r − 1 ⟩ = ⟨ r , s ∣ ord ⁡ ( r ) = n , ord ⁡ ( s ) = 2 , s r s = r − 1 ⟩ = ⟨ r , s ∣ r n = s 2 = ( s r ) 2 = 1 ⟩ . {\displaystyle {\begin{aligned}\mathrm {D} _{n}&=\left\langle r,s\mid \operatorname {ord} (r)=n,\operatorname {ord} (s)=2,srs^{-1}=r^{-1}\right\rangle \\&=\left\langle r,s\mid \operatorname {ord} (r)=n,\operatorname {ord} (s)=2,srs=r^{-1}\right\rangle \\&=\left\langle r,s\mid r^{n}=s^{2}=(sr)^{2}=1\right\rangle .\end{aligned}}}
+Using the relation s 2 = 1 {\displaystyle s^{2}=1} , we obtain the relation r = s ⋅ s r {\displaystyle r=s\cdot sr} . 
+It follows that D n {\displaystyle \mathrm {D} _{n}} is generated by s {\displaystyle s} and t := s r {\displaystyle t:=sr} . This substitution also shows that D n {\displaystyle \mathrm {D} _{n}} has the presentation
+D n = ⟨ s , t ∣ s 2 = 1 , t 2 = 1 , ( s t ) n = 1 ⟩ . {\displaystyle \mathrm {D} _{n}=\left\langle s,t\mid s^{2}=1,t^{2}=1,(st)^{n}=1\right\rangle .}
+In particular, D n belongs to the class of Coxeter groups .
+
+## Small dihedral groups
+
+D 2 is isomorphic to K 4 , the Klein four-group .
+D 1 and D 2 are exceptional in that:
+D 1 and D 2 are the only abelian dihedral groups. Otherwise, D n is non-abelian.
+D n is a subgroup of the symmetric group S n for n ≥ 3 . Since 2 n > n ! for n = 1 or n = 2 , for these values, D n is too large to be a subgroup.
+The inner automorphism group of D 2 is trivial, whereas for other even values of n , this is D n / Z 2 .
+The cycle graphs of dihedral groups consist of an n -element cycle and n 2-element cycles. The dark vertex in the cycle graphs below of various dihedral groups represents the identity element, and the other vertices are the other elements of the group. A cycle consists of successive powers of either of the elements connected to the identity element .
+
+## The dihedral group as symmetry group in 2D and rotation group in 3D
+
+An example of abstract group D n , and a common way to visualize it, is the group of Euclidean plane isometries which keep the origin fixed. These groups form one of the two series of discrete point groups in two dimensions . D n consists of n rotations of multiples of 360°/ n about the origin, and reflections across n lines through the origin, making angles of multiples of 180°/ n with each other. This is the symmetry group of a regular polygon with n sides (for n ≥ 3 ; this extends to the cases n = 1 and n = 2 where we have a plane with respectively a point offset from the "center" of the "1-gon" and a "2-gon" or line segment).
+D n is generated by a rotation r of order n and a reflection s of order 2 such that
+s r s = r − 1 {\displaystyle \mathrm {srs} =\mathrm {r} ^{-1}\,}
+In geometric terms: in the mirror a rotation looks like an inverse rotation.
+In terms of complex numbers : multiplication by e 2 π i n {\displaystyle e^{2\pi i \over n}} and complex conjugation .
+r 1 = [ cos ⁡ 2 π n − sin ⁡ 2 π n sin ⁡ 2 π n cos ⁡ 2 π n ] s 0 = [ 1 0 0 − 1 ] {\displaystyle \mathrm {r} _{1}={\begin{bmatrix}\cos {2\pi  \over n}&-\sin {2\pi  \over n}\\[4pt]\sin {2\pi  \over n}&\cos {2\pi  \over n}\end{bmatrix}}\qquad \mathrm {s} _{0}={\begin{bmatrix}1&0\\0&-1\end{bmatrix}}}
+and defining r j = r 1 j {\displaystyle \mathrm {r} _{j}=\mathrm {r} _{1}^{j}} and s j = r j s 0 {\displaystyle \mathrm {s} _{j}=\mathrm {r} _{j}\,\mathrm {s} _{0}} for j ∈ { 1 , … , n − 1 } {\displaystyle j\in \{1,\ldots ,n-1\}} we can write the product rules for D n as
+r j r k = r ( j + k ) mod n r j s k = s ( j + k ) mod n s j r k = s ( j − k ) mod n s j s k = r ( j − k ) mod n {\displaystyle {\begin{aligned}\mathrm {r} _{j}\,\mathrm {r} _{k}&=\mathrm {r} _{(j+k){\text{ mod }}n}\\\mathrm {r} _{j}\,\mathrm {s} _{k}&=\mathrm {s} _{(j+k){\text{ mod }}n}\\\mathrm {s} _{j}\,\mathrm {r} _{k}&=\mathrm {s} _{(j-k){\text{ mod }}n}\\\mathrm {s} _{j}\,\mathrm {s} _{k}&=\mathrm {r} _{(j-k){\text{ mod }}n}\end{aligned}}}
+(Compare coordinate rotations and reflections .)
+The dihedral group D 2 is generated by the rotation r of 180 degrees, and the reflection s across the x -axis. The elements of D 2 can then be represented as {e, r, s, rs}, where e is the identity or null transformation and rs is the reflection across the y -axis.
+D 2 is isomorphic to the Klein four-group .
+For n > 2 the operations of rotation and reflection in general do not commute and D n is not abelian ; for example, in D 4 , a rotation of 90 degrees followed by a reflection yields a different result from a reflection followed by a rotation of 90 degrees.
+Thus, beyond their obvious application to problems of symmetry in the plane, these groups are among the simplest examples of non-abelian groups, and as such arise frequently as easy counterexamples to theorems which are restricted to abelian groups.
+The 2 n elements of D n can be written as e , r , r , ... , r , s , r s , r s , ... , r s . The first n listed elements are rotations and the remaining n elements are axis-reflections (all of which have order 2). The product of two rotations or two reflections is a rotation; the product of a rotation and a reflection is a reflection.
+So far, we have considered D n to be a subgroup of O(2) , i.e. the group of rotations (about the origin) and reflections (across axes through the origin) of the plane. However, notation D n is also used for a subgroup of SO(3) which is also of abstract group type D n : the proper symmetry group of a regular polygon embedded in three-dimensional space (if n ≥ 3). Such a figure may be considered as a degenerate regular solid with its face counted twice. Therefore, it is also called a dihedron (Greek: solid with two faces), which explains the name dihedral group (in analogy to tetrahedral , octahedral and icosahedral group , referring to the proper symmetry groups of a regular tetrahedron , octahedron , and icosahedron respectively).
+
+### Examples of 2D dihedral symmetry
+
+2D D 16 symmetry – Imperial Seal of Japan, representing eightfold chrysanthemum with sixteen petals .
+2D D 6 symmetry – The Red Star of David
+2D D 12 symmetry — The Naval Jack of the Republic of China (White Sun)
+2D D 24 symmetry – Ashoka Chakra , as depicted on the National flag of the Republic of India .
+
+## Properties
+
+The properties of the dihedral groups D n with n ≥ 3 depend on whether n is even or odd. For example, the center of D n consists only of the identity if n is odd, but if n is even the center has two elements, namely the identity and the element r (with D n as a subgroup of O(2), this is inversion ; since it is scalar multiplication by −1, it is clear that it commutes with any linear transformation).
+In the case of 2D isometries, this corresponds to adding inversion, giving rotations and mirrors in between the existing ones.
+For n twice an odd number, the abstract group D n is isomorphic with the direct product of D n / 2 and Z 2 .
+Generally, if m divides n , then D n has n / m subgroups of type D m , and one subgroup Z {\displaystyle \mathbb {Z} } m . Therefore, the total number of subgroups of D n ( n ≥ 1), is equal to d ( n ) + σ( n ), where d ( n ) is the number of positive divisors of n and σ ( n ) is the sum of the positive divisors of n .  See list of small groups for the cases n ≤ 8.
+The dihedral group of order 8 (D 4 ) is the smallest example of a group that is not a T-group . Any of its two Klein four-group subgroups (which are normal in D 4 ) has as normal subgroup order-2 subgroups generated by a reflection (flip) in D 4 , but these subgroups are not normal in D 4 .
+
+### Conjugacy classes of reflections
+
+All the reflections are conjugate to each other whenever n is odd, but they fall into two conjugacy classes if n is even. If we think of the isometries of a regular n -gon: for odd n there are rotations in the group between every pair of mirrors, while for even n only half of the mirrors can be reached from one by these rotations. Geometrically, in an odd polygon every axis of symmetry passes through a vertex and a side, while in an even polygon there are two sets of axes, each corresponding to a conjugacy class: those that pass through two vertices and those that pass through two sides.
+Algebraically, this is an instance of the conjugate Sylow theorem (for n odd): for n odd, each reflection, together with the identity, form a subgroup of order 2, which is a Sylow 2-subgroup ( 2 = 2 is the maximum power of 2 dividing 2 n = 2[2 k + 1] ), while for n even, these order 2 subgroups are not Sylow subgroups because 4 (a higher power of 2) divides the order of the group.
+For n even there is instead an outer automorphism interchanging the two types of reflections (properly, a class of outer automorphisms, which are all conjugate by an inner automorphism).
+
+## Automorphism group
+
+The automorphism group of D n is isomorphic to the holomorph of Z {\displaystyle \mathbb {Z} } / n Z {\displaystyle \mathbb {Z} } , i.e., to Hol( Z {\displaystyle \mathbb {Z} } / n Z {\displaystyle \mathbb {Z} } ) = { ax + b | ( a , n ) = 1} and has order nϕ ( n ), where ϕ is Euler's totient function, the number of k in 1, ..., n − 1 coprime to n .
+It can be understood in terms of the generators of a reflection and an elementary rotation (rotation by k (2 π / n ), for k coprime to n ); which automorphisms are inner and outer depends on the parity of n .
+For n odd, the dihedral group is centerless, so any element defines a non-trivial inner automorphism; for n even, the rotation by 180° (reflection through the origin) is the non-trivial element of the center.
+Thus for n odd, the inner automorphism group has order 2 n , and for n even (other than n = 2 ) the inner automorphism group has order n .
+For n odd, all reflections are conjugate; for n even, they fall into two classes (those through two vertices and those through two faces), related by an outer automorphism, which can be represented by rotation by π / n (half the minimal rotation).
+The rotations are a normal subgroup; conjugation by a reflection changes the sign (direction) of the rotation, but otherwise leaves them unchanged. Thus automorphisms that multiply angles by k (coprime to n ) are outer unless k = ±1 .
+
+### Examples of automorphism groups
+
+D 9 has 18 inner automorphisms . As 2D isometry group D 9 , the group has mirrors at 20° intervals. The 18 inner automorphisms provide rotation of the mirrors by multiples of 20°, and reflections. As isometry group these are all automorphisms. As abstract group there are in addition to these, 36 outer automorphisms ; e.g., multiplying angles of rotation by 2.
+D 10 has 10 inner automorphisms. As 2D isometry group D 10 , the group has mirrors at 18° intervals. The 10 inner automorphisms provide rotation of the mirrors by multiples of 36°, and reflections. As isometry group there are 10 more automorphisms; they are conjugates by isometries outside the group, rotating the mirrors 18° with respect to the inner automorphisms. As abstract group there are in addition to these 10 inner and 10 outer automorphisms, 20 more outer automorphisms; e.g., multiplying rotations by 3.
+Compare the values 6 and 4 for Euler's totient function , the multiplicative group of integers modulo n for n = 9 and 10, respectively. This triples and doubles the number of automorphisms compared with the two automorphisms as isometries (keeping the order of the rotations the same or reversing the order).
+The only values of n for which φ ( n ) = 2 are 3, 4, and 6, and consequently, there are only three dihedral groups that are isomorphic to their own automorphism groups, namely D 3 (order 6), D 4 (order 8), and D 6 (order 12).
+
+### Inner automorphism group
+
+The inner automorphism group of D n is isomorphic to:
+D n / Z 2 if n is even (for n = 2 , D 2 / Z 2 = 1 ).
+
+## Generalizations
+
+There are several important generalizations of the dihedral groups:
+The infinite dihedral group is an infinite group with algebraic structure similar to the finite dihedral groups.  It can be viewed as the group of symmetries of the integers .
+The orthogonal group O(2), i.e., the symmetry group of the circle , also has similar properties to the dihedral groups.
+The family of generalized dihedral groups includes both of the examples above, as well as many other groups.
+The quasidihedral groups are family of finite groups with similar properties to the dihedral groups.
+Coordinate rotations and reflections
+Cycle index of the dihedral group
+Dihedral symmetry groups in 3D
+Dihedral symmetry in three dimensions
+Dihedral Group n of Order 2n by Shawn Dudzik, Wolfram Demonstrations Project .
+Weisstein, Eric W. "Dihedral Group" . MathWorld .
+Weisstein, Eric W. "Dihedral Group D3" . MathWorld .
+Weisstein, Eric W. "Dihedral Group D4" . MathWorld .
+Weisstein, Eric W. "Dihedral Group D5" . MathWorld .
+Davis, Declan. "Dihedral Group D6" . MathWorld .
