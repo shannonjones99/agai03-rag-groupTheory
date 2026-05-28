@@ -151,8 +151,3 @@ The retriever uses a **confidence threshold** (cosine distance < 0.35) to decide
 This gives fast, accurate answers for common questions while gracefully handling novel queries.
 
 ---
-
-## Author
-
-**[Your Name]**  
-AGAI-03 · May 2026
